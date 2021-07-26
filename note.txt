@@ -1,0 +1,8 @@
+-> install python
+-> pip install robotframework
+-> pip install robotframework-seleniumlibrary
+-> https://www.selenium.dev/downloads/      for google chrome
+-> install Intellibot plugin for Pycharm IDE
+-> https://github.com/lte2000/intellibot/blob/develop/intellibot.jar   latest plugin for robot framework
+
+-> short cut key    (ctrl+B)    (ALT+ left Arrow)
