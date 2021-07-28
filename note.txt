@@ -10,3 +10,4 @@
 -> Settings, variables, Test Cases, Keywords
 
 ->robot -d results Amazon.robot
+-> -d helps to specify where the results will be logged

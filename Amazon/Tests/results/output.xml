@@ -1,34 +1,253 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0.3 (Python 3.9.2 on win32)" generated="20210727 15:57:44.202" rpa="false" schemaversion="2">
-<suite id="s1" name="Amazon" source="C:\Users\Arnab Das\Documents\Education\learn_test_automation_with_robot_framework\Robot-Framework\Amazon\Tests\Amazon.robot">
-<test id="s1-t1" name="User must sign in to check out">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>http://www.amazon.com</arg>
-<arg>ie</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210727 15:57:44.373" level="INFO">Opening browser 'ie' to base url 'http://www.amazon.com'.</msg>
-<status status="PASS" starttime="20210727 15:57:44.373" endtime="20210727 15:57:47.029"/>
+<robot generator="Robot 3.2.2 (Python 3.9.2 on win32)" generated="20210728 17:13:12.472" rpa="false">
+<suite id="s1" name="Hello world" source="C:\Users\Arnab Das\Documents\Education\learn_test_automation_with_robot_framework\Robot-Framework\Amazon\Tests\Hello_world.robot">
+<test id="s1-t1" name="Print hello world">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Hello_world</arg>
+</arguments>
+<assign>
+<var>${Var1}</var>
+</assign>
+<msg timestamp="20210728 17:13:12.720" level="INFO">${Var1} = Hello_world</msg>
+<status status="PASS" starttime="20210728 17:13:12.719" endtime="20210728 17:13:12.720"></status>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210727 15:57:47.030" endtime="20210727 15:57:50.183"/>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${Var1}</arg>
+</arguments>
+<status status="PASS" starttime="20210728 17:13:12.720" endtime="20210728 17:13:12.721"></status>
 </kw>
-<doc>This is some basic info about the test</doc>
-<tag>Smoke</tag>
-<status status="PASS" starttime="20210727 15:57:44.372" endtime="20210727 15:57:50.184"/>
+<doc>trying to print hello world</doc>
+<tags>
+<tag>importent</tag>
+</tags>
+<status status="PASS" starttime="20210728 17:13:12.719" endtime="20210728 17:13:12.722" critical="yes"></status>
 </test>
-<doc>this is some basic info about the settings for this test file</doc>
-<status status="PASS" starttime="20210727 15:57:44.203" endtime="20210727 15:57:50.186"/>
+<test id="s1-t2" name="Working with List">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>Arnab</arg>
+<arg>Das</arg>
+<arg>Wipro</arg>
+<arg>work</arg>
+<arg>2021</arg>
+</arguments>
+<assign>
+<var>@{List1}</var>
+</assign>
+<msg timestamp="20210728 17:13:12.724" level="INFO">@{List1} = [ Arnab | Das | Wipro | work | 2021 ]</msg>
+<status status="PASS" starttime="20210728 17:13:12.724" endtime="20210728 17:13:12.724"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${List1}</arg>
+</arguments>
+<assign>
+<var>${lenth_list}</var>
+</assign>
+<msg timestamp="20210728 17:13:12.725" level="INFO">Length is 5</msg>
+<msg timestamp="20210728 17:13:12.725" level="INFO">${lenth_list} = 5</msg>
+<status status="PASS" starttime="20210728 17:13:12.725" endtime="20210728 17:13:12.725"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${lenth_list}</arg>
+</arguments>
+<status status="PASS" starttime="20210728 17:13:12.726" endtime="20210728 17:13:12.727"></status>
+</kw>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${List1}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${list_data}</var>
+</assign>
+<msg timestamp="20210728 17:13:12.727" level="INFO">${list_data} = Arnab</msg>
+<status status="PASS" starttime="20210728 17:13:12.727" endtime="20210728 17:13:12.727"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${list_data}</arg>
+</arguments>
+<status status="PASS" starttime="20210728 17:13:12.727" endtime="20210728 17:13:12.728"></status>
+</kw>
+<doc>trying to understand list</doc>
+<tags>
+<tag>Importent_1</tag>
+</tags>
+<status status="PASS" starttime="20210728 17:13:12.723" endtime="20210728 17:13:12.728" critical="yes"></status>
+</test>
+<test id="s1-t3" name="working with FOR loop">
+<kw name="${i} IN RANGE [ 1 | 10 ]" type="for">
+<kw name="${i} = 1" type="foritem">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<status status="PASS" starttime="20210728 17:13:12.732" endtime="20210728 17:13:12.732"></status>
+</kw>
+<status status="PASS" starttime="20210728 17:13:12.731" endtime="20210728 17:13:12.732"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<status status="PASS" starttime="20210728 17:13:12.732" endtime="20210728 17:13:12.733"></status>
+</kw>
+<status status="PASS" starttime="20210728 17:13:12.732" endtime="20210728 17:13:12.733"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<status status="PASS" starttime="20210728 17:13:12.733" endtime="20210728 17:13:12.733"></status>
+</kw>
+<status status="PASS" starttime="20210728 17:13:12.733" endtime="20210728 17:13:12.733"></status>
+</kw>
+<kw name="${i} = 4" type="foritem">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<status status="PASS" starttime="20210728 17:13:12.733" endtime="20210728 17:13:12.734"></status>
+</kw>
+<status status="PASS" starttime="20210728 17:13:12.733" endtime="20210728 17:13:12.734"></status>
+</kw>
+<kw name="${i} = 5" type="foritem">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<status status="PASS" starttime="20210728 17:13:12.735" endtime="20210728 17:13:12.735"></status>
+</kw>
+<status status="PASS" starttime="20210728 17:13:12.734" endtime="20210728 17:13:12.735"></status>
+</kw>
+<kw name="${i} = 6" type="foritem">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<status status="PASS" starttime="20210728 17:13:12.735" endtime="20210728 17:13:12.736"></status>
+</kw>
+<status status="PASS" starttime="20210728 17:13:12.735" endtime="20210728 17:13:12.736"></status>
+</kw>
+<kw name="${i} = 7" type="foritem">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<status status="PASS" starttime="20210728 17:13:12.736" endtime="20210728 17:13:12.736"></status>
+</kw>
+<status status="PASS" starttime="20210728 17:13:12.736" endtime="20210728 17:13:12.736"></status>
+</kw>
+<kw name="${i} = 8" type="foritem">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<status status="PASS" starttime="20210728 17:13:12.736" endtime="20210728 17:13:12.737"></status>
+</kw>
+<status status="PASS" starttime="20210728 17:13:12.736" endtime="20210728 17:13:12.737"></status>
+</kw>
+<kw name="${i} = 9" type="foritem">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<status status="PASS" starttime="20210728 17:13:12.737" endtime="20210728 17:13:12.737"></status>
+</kw>
+<status status="PASS" starttime="20210728 17:13:12.737" endtime="20210728 17:13:12.737"></status>
+</kw>
+<status status="PASS" starttime="20210728 17:13:12.731" endtime="20210728 17:13:12.737"></status>
+</kw>
+<kw name="${ITEMS_LIST} IN [ ${List1} ]" type="for">
+<kw name="${ITEMS_LIST} = ['create list', 'Arnab', 'Das', 'Wipro', 'work', '2021']" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ITEMS_LIST}</arg>
+</arguments>
+<msg timestamp="20210728 17:13:12.738" level="INFO">['create list', 'Arnab', 'Das', 'Wipro', 'work', '2021']</msg>
+<status status="PASS" starttime="20210728 17:13:12.738" endtime="20210728 17:13:12.738"></status>
+</kw>
+<status status="PASS" starttime="20210728 17:13:12.737" endtime="20210728 17:13:12.738"></status>
+</kw>
+<status status="PASS" starttime="20210728 17:13:12.737" endtime="20210728 17:13:12.738"></status>
+</kw>
+<doc>trying to understand for loop</doc>
+<tags>
+<tag>Importent_2</tag>
+</tags>
+<status status="PASS" starttime="20210728 17:13:12.730" endtime="20210728 17:13:12.739" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Run Keyword and run if keyword">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>log to console</arg>
+</arguments>
+<assign>
+<var>${Key_val}</var>
+</assign>
+<msg timestamp="20210728 17:13:12.742" level="INFO">${Key_val} = log to console</msg>
+<status status="PASS" starttime="20210728 17:13:12.742" endtime="20210728 17:13:12.742"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>${Key_val}</arg>
+<arg>this_is_log_console_in_a_variabel</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>this_is_log_console_in_a_variabel</arg>
+</arguments>
+<status status="PASS" starttime="20210728 17:13:12.744" endtime="20210728 17:13:12.744"></status>
+</kw>
+<status status="PASS" starttime="20210728 17:13:12.743" endtime="20210728 17:13:12.744"></status>
+</kw>
+<doc>testing to understand run and run if</doc>
+<tags>
+<tag>Importent_3</tag>
+</tags>
+<status status="PASS" starttime="20210728 17:13:12.740" endtime="20210728 17:13:12.744" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210728 17:13:12.474" endtime="20210728 17:13:12.746"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="4" fail="0">Critical Tests</stat>
+<stat pass="4" fail="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Smoke</stat>
+<stat pass="1" fail="0">importent</stat>
+<stat pass="1" fail="0">Importent_1</stat>
+<stat pass="1" fail="0">Importent_2</stat>
+<stat pass="1" fail="0">Importent_3</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Amazon">Amazon</stat>
+<stat pass="4" fail="0" id="s1" name="Hello world">Hello world</stat>
 </suite>
 </statistics>
 <errors>
